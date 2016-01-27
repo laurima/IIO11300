@@ -9,7 +9,9 @@
     <Grid>
         <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="75" Click="btnPlay_Click"/>
         <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="246" Margin="10,63,0,0" VerticalAlignment="Top" Width="497" LoadedBehavior="Manual"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="417"/>
+        <TextBox x:Name="txtFileName" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="d:\temp\Testi.mp3" VerticalAlignment="Top" Width="417" TextChanged="txtFileName_TextChanged"/>
         <Button x:Name="btmUrl" Content="Url" HorizontalAlignment="Left" Margin="432,10,0,0" VerticalAlignment="Top" Width="75" Click="btmUrl_Click"/>
+        <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Left" Margin="90,38,0,0" VerticalAlignment="Top" Width="75" Click="btnPause_Click"/>
+        <Button x:Name="btnStop" HorizontalAlignment="Left" Margin="170,38,0,0" VerticalAlignment="Top" Width="75" Click="btnStop_Click" Height="20" Content="Stop"/>
     </Grid>
 </Window>

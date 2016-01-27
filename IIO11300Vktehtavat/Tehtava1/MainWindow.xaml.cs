@@ -26,7 +26,10 @@ namespace Tehtava1
   /// </summary>
   public partial class MainWindow : Window
   {
-    public MainWindow()
+        private object textBox_Height;
+        private object textBox_Width;
+
+        public MainWindow()
     {
       InitializeComponent();
     }
@@ -44,18 +47,18 @@ namespace Tehtava1
                 karminPaksuus = Double.Parse(txtkarminPaksuus.Text);
 
                 // Laske ikkunan alue
-                ikkunanAlue = ikkunanKorkeus * ikkunanLeveys;
+                ikkunanAla = ikkunanKorkeus * ikkunanLeveys;
 
                 // Laske karmin piiri
                 karminPiiri = BusinessLogicWindow.laskePiiri(ikkunanKorkeus + karminPaksuus, ikkunanLeveys + karminPaksuus);
 
                 // Laske karmin alue
-                karminAlue = (ikkunanLeveys + karminPaksuus * 2) * (ikkunanKorkeus + karminPaksuus * 2) - ikkunanAlue;
+                karminAla = (ikkunanLeveys + karminPaksuus * 2) * (ikkunanKorkeus + karminPaksuus * 2) - ikkunanAla;
 
                 // Output
-                txtkarminAlue.Text = Convert.ToString(karminAlue);
+                txtkarminAlue.Text = Convert.ToString(karminAla);
                 txtkarminPiiri.Text = Convert.ToString(karminPiiri);
-                txtikkunanAlue.Text = Convert.ToString(ikkunanAlue);
+                txtikkunanAlue.Text = Convert.ToString(ikkunanAla);
             }
             catch (Exception ex)
             {
@@ -72,9 +75,30 @@ namespace Tehtava1
       //käynnissä olevan sovelluksen sulkeminen
       Application.Current.Shutdown();
     }
-  }
 
-  public class BusinessLogicWindow
+        private void btnCalculateOO_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //lasketaan  pinta-ala ikkuna-olion avulla
+                //luodaan luokasta olio
+                Tehtava1JAMK.IT.IIO11300.Ikkuna ikk = new Tehtava1JAMK.IT.IIO11300.Ikkuna();
+                ikk.Korkeus = double.Parse(textBox_Height.Text);
+                ikk.Leveys = double.Parse(textBox_Width.Text);
+                //tulos käyttäjälle
+                MessageBox.Show(ikk.LaskePintaAla().ToString());
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
+    }
+
+    public class BusinessLogicWindow
     {
     /// <summary>
     /// CalculatePerimeter calculates the perimeter of a window
