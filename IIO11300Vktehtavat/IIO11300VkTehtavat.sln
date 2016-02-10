@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitus1MediaPlayer", "Ha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H3Mittausdata", "H3Mittausdata\H3Mittausdata.csproj", "{5A78774F-7816-4992-9B4C-B59F96749340}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H4KonsoliXML", "H4KonsoliXML\H4KonsoliXML.csproj", "{AC26DAAE-A156-4915-A328-77F3780F7B4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H4WpfXML2", "H4WpfXML2\H4WpfXML2.csproj", "{6CCE453B-FAE6-49BD-B14A-2FEE377DD76F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{5A78774F-7816-4992-9B4C-B59F96749340}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A78774F-7816-4992-9B4C-B59F96749340}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A78774F-7816-4992-9B4C-B59F96749340}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC26DAAE-A156-4915-A328-77F3780F7B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC26DAAE-A156-4915-A328-77F3780F7B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC26DAAE-A156-4915-A328-77F3780F7B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC26DAAE-A156-4915-A328-77F3780F7B4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CCE453B-FAE6-49BD-B14A-2FEE377DD76F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CCE453B-FAE6-49BD-B14A-2FEE377DD76F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CCE453B-FAE6-49BD-B14A-2FEE377DD76F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CCE453B-FAE6-49BD-B14A-2FEE377DD76F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

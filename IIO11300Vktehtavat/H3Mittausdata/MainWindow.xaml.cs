@@ -14,13 +14,15 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using JAMK.IT.IIO11300;
 
-namespace H3Mittausdata
+namespace H3MittausData
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        //luodaan kokelma mittaus-olioille
+        List<MittausData> mitatut;
         public MainWindow()
         {
             InitializeComponent();
@@ -30,13 +32,45 @@ namespace H3Mittausdata
         {
             //omat ikkunaan liittyvät alustukset
             txtToday.Text = DateTime.Today.ToShortDateString();
+            mitatut = new List<MittausData>();
         }
 
         private void btnSaveData_Click(object sender, RoutedEventArgs e)
         {
             //luodaan uusi mittausdata olio ja näytetään se käyttäjälle
             MittausData md = new MittausData(txtClock.Text, txtData.Text);
-            lbData.Items.Add(md.ToString());
+            //lbData.Items.Add(md); // alkuperäinen tapa
+            //lisätään mittaus-olio kokoelmaan // uusi tapa
+            mitatut.Add(md);
+            ApplyChanges();
+        }
+        private void ApplyChanges()
+        {
+            //päivitetään UI vastaamaan kokoelman tietoja
+            lbData.ItemsSource = null;
+            lbData.ItemsSource = mitatut;
+        }
+
+        private void btnSaveToFile_Click(object sender, RoutedEventArgs e)
+        {
+            //luetaan data käyttäjän antamasta tiedostosta
+            try
+            {
+                mitatut = null;
+                mitatut = MittausData.ReadDataFromFile(txtFileName.Text);
+                ApplyChanges();
+                MessageBox.Show("Tiedot luettu onnistuneesti tiedostosta " + txtFileName.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnSaveToXML_Click(object sender, RoutedEventArgs e)
+        {
+            //serialisoidaan XML:ksi
+            JAMK.IT.IIO11300.Serialisoi.SerialisoiXML(@"d:\testi.xml", mitatut);
         }
     }
 }
