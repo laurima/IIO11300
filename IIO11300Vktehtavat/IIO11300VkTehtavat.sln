@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H4KonsoliXML", "H4KonsoliXM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H4WpfXML2", "H4WpfXML2\H4WpfXML2.csproj", "{6CCE453B-FAE6-49BD-B14A-2FEE377DD76F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H5MoviesXML", "H5MoviesXML\H5MoviesXML.csproj", "{F21ED91E-0B81-4FC5-8C89-8DA8760C7EEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H6DatabindingX3", "H6DatabindingX3\H6DatabindingX3.csproj", "{160BC14F-8ADC-4344-B7AD-D9CCC611AA2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{6CCE453B-FAE6-49BD-B14A-2FEE377DD76F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CCE453B-FAE6-49BD-B14A-2FEE377DD76F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CCE453B-FAE6-49BD-B14A-2FEE377DD76F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F21ED91E-0B81-4FC5-8C89-8DA8760C7EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F21ED91E-0B81-4FC5-8C89-8DA8760C7EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F21ED91E-0B81-4FC5-8C89-8DA8760C7EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F21ED91E-0B81-4FC5-8C89-8DA8760C7EEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{160BC14F-8ADC-4344-B7AD-D9CCC611AA2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{160BC14F-8ADC-4344-B7AD-D9CCC611AA2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{160BC14F-8ADC-4344-B7AD-D9CCC611AA2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{160BC14F-8ADC-4344-B7AD-D9CCC611AA2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
